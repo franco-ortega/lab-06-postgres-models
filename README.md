@@ -15,10 +15,14 @@ Setup:
 1. *npm i supertest*
 1. *code .*
 1. Update .env file
-1. *git checkout -b main*
+1. *git checkout -b main* (creates main branch)
 1. Create README.md
 1. Create repo on GitHub
 1. *git remote add origin GitHub_URL*
+1. ACP:
+    1. *git add -A*
+    1. *git commit -m 'add initial commit'*
+    1. *git push origin main*
 
 
 
