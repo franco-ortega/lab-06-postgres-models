@@ -25,8 +25,16 @@ Setup:
     1. *git push origin main*
 1. *git checkout -b dev* (creates dev branch)
 1. Connect to pgAdmin
-
-
+1. Create files:
+    1. app.js
+    1. server.js
+1. Create folders:
+    1. sql
+        1. Create file: setup.sql
+    1. models (in lib folder)
+        1. Create file: maps.js
+    1. __tests__
+        1. Create file: app.test.js
 
 
 
