@@ -1,9 +1,10 @@
 # README
 
-Lab Instruction:
+## Lab Instructions:
+
 https://github.com/alchemycodelab/alchemy-fsjs-december-2020/tree/main/06_postgres-models/lab
 
-Setup:
+## Setup:
 
 1. *mkdir lab-06-postgres-models*
 1. *cd lab-06-postgres-models*
@@ -14,7 +15,7 @@ Setup:
 1. *npm i express*
 1. *npm i supertest*
 1. *code .*
-1. Update .env file
+1. Update .env file to connect to postgres
 1. *git checkout -b main* (creates main branch)
 1. Create README.md
 1. Create repo on GitHub
@@ -23,6 +24,18 @@ Setup:
     1. *git add -A*
     1. *git commit -m 'add initial commit'*
     1. *git push origin main*
+1. *git checkout -b dev* (creates dev branch)
+1. Connect to pgAdmin
+1. Create files:
+    1. app.js
+    1. server.js
+1. Create folders:
+    1. sql
+        1. Create file: setup.sql
+    1. models (in lib folder)
+        1. Create file: maps.js
+    1. __ tests __
+        1. Create file: app.test.js
 
 
 
