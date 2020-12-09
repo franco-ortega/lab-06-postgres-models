@@ -92,6 +92,23 @@ describe('app.js endpoints', () => {
     });
   });
 
+  it('deletes one map by ID via DELETE', async() => {
+    const map = await Map.insert({
+      title: 'eight',
+      terrain: 'ocean',
+      price: '2000'
+    });
+    const response = await request(app)
+      .delete(`/map/${map.id}`);
+
+    expect(response.body).toEqual({
+      ...map,
+      title: 'eight',
+      terrain: 'ocean',
+      price: '2000'
+    });
+  });
+
 });
 
 
