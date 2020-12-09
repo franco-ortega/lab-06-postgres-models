@@ -70,6 +70,28 @@ describe('app.js endpoints', () => {
     expect(response.body).toEqual(map);
   });
 
+  it('updates one map by ID via PUT', async() => {
+    const map = await Map.insert({
+      title: 'seven',
+      terrain: 'space',
+      price: '99'
+    });
+    const response = await request(app)
+      .put(`/map/${map.id}`)
+      .send({
+        title: 'seven stars',
+        terrain: 'outer space',
+        price: '99'
+      });
+
+    expect(response.body).toEqual({
+      ...map,
+      title: 'seven stars',
+      terrain: 'outer space',
+      price: '99'
+    });
+  });
+
 });
 
 
