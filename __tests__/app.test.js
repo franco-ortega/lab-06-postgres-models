@@ -13,16 +13,6 @@ describe('app.js endpoints', () => {
     return pool.end();
   });
 
-
-  it('sample test to make sure the wiring is connected', () => {
-    return request(app)
-      .get('/')
-      .then(res => {
-        expect(res.text).toEqual('It is mapping time!!');
-      });
-
-  });
-
   it('creates a map via POST', async() => {
     const resposne = await request(app)
       .post('/map')

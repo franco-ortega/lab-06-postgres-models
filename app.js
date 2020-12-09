@@ -4,11 +4,6 @@ const app = express();
 app.use(express.json());
 const Map = require('./lib/models/maps');
 
-app.get('/', (req, res) => {
-  console.log(req.body);
-  res.send('It is mapping time!!');
-});
-
 // Create a map
 app.post('/map', (req, res) => {
   try {
