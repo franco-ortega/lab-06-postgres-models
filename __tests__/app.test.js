@@ -11,7 +11,7 @@ describe('app.js endpoints', () => {
 
   afterAll(() => {
     return pool.end();
-  })
+  });
 
 
   it('sample test to make sure the wiring is connected', () => {
@@ -56,7 +56,18 @@ describe('app.js endpoints', () => {
       .get('/map');
     
     expect(response.body).toEqual([map1, map2]);
+  });
 
+  it('gets one map by ID via GET', async() => {
+    const map = await Map.insert({
+      title: 'seven',
+      terrain: 'space',
+      price: '99'
+    });
+    const response = await request(app)
+      .get(`/map/${map.id}`);
+
+    expect(response.body).toEqual(map);
   });
 
 });
