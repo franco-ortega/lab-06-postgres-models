@@ -14,7 +14,7 @@ Setup:
 1. *npm i express*
 1. *npm i supertest*
 1. *code .*
-1. Update .env file
+1. Update .env file to connect to postgres
 1. *git checkout -b main* (creates main branch)
 1. Create README.md
 1. Create repo on GitHub
@@ -25,7 +25,7 @@ Setup:
     1. *git push origin main*
     1. *git checkout -b dev* (creates dev branch)
 
-    
+
 
 
 
