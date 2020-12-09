@@ -23,6 +23,9 @@ Setup:
     1. *git add -A*
     1. *git commit -m 'add initial commit'*
     1. *git push origin main*
+    1. *git checkout -b dev* (creates dev branch)
+
+    
 
 
 
