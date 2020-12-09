@@ -5,13 +5,9 @@ const pool = require('../lib/utils/pool.js');
 const Map = require('../lib/models/maps');
 
 describe('app.js endpoints', () => {
-  beforeEach(() => {
-    return pool.query(fs.readFileSync('./sql/setup.sql', 'utf-8'));
-  });
+  beforeEach(() => pool.query(fs.readFileSync('./sql/setup.sql', 'utf-8')));
 
-  afterAll(() => {
-    return pool.end();
-  });
+  afterAll(() => pool.end());
 
   it('creates a map via POST', async() => {
     const resposne = await request(app)
