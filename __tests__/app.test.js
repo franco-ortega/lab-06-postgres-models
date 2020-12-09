@@ -2,6 +2,7 @@ const fs = require('fs');
 const request = require('supertest');
 const app = require('../app.js');
 const pool = require('../lib/utils/pool.js');
+const Map = require('../lib/models/maps');
 
 describe('app.js endpoints', () => {
   beforeEach(() => {
@@ -29,13 +30,33 @@ describe('app.js endpoints', () => {
         title: 'four',
         terrain: 'swamp',
         price: '100'
-      })
+      });
     expect(resposne.body).toEqual({
       id: '1',
       title: 'four',
       terrain: 'swamp',
       price: '100'
     });
+  });
+
+  it('finds all maps via GET', async() => {
+    const map1 = await Map.insert({
+      title: 'five',
+      terrain: 'desert',
+      price: '55'
+    });
+    
+    const map2 = await Map.insert({
+      title: 'six',
+      terrain: 'plains',
+      price: '65'
+    });
+
+    const response = await request(app)
+      .get('/map');
+    
+    expect(response.body).toEqual([map1, map2]);
+
   });
 
 });
