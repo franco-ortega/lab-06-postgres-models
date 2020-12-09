@@ -33,7 +33,7 @@ Setup:
         1. Create file: setup.sql
     1. models (in lib folder)
         1. Create file: maps.js
-    1. __tests__
+    1. __ tests __
         1. Create file: app.test.js
 
 
