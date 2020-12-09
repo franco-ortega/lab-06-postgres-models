@@ -1,9 +1,10 @@
 # README
 
-Lab Instruction:
+## Lab Instructions:
+
 https://github.com/alchemycodelab/alchemy-fsjs-december-2020/tree/main/06_postgres-models/lab
 
-Setup:
+## Setup:
 
 1. *mkdir lab-06-postgres-models*
 1. *cd lab-06-postgres-models*
